@@ -11,8 +11,8 @@ const Home = () => {
 
       <Text style={styles.title}>The Number 1</Text>
       <Text style={{marginTop:10, marginBottom:10}}>Reading List App</Text>
-      <Link href='/about' style={styles.link}>About Page</Link>
-      <Link href='/contact' style={styles.link}>Contact Page</Link>
+      <Link href='/login' style={styles.link}>Login Page</Link>
+      <Link href='/register' style={styles.link}>Register Page</Link>
     </View>
   )
 }
