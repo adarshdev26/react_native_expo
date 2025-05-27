@@ -13,6 +13,7 @@ const Home = () => {
       <Text style={{marginTop:10, marginBottom:10}}>Reading List App</Text>
       <Link href='/login' style={styles.link}>Login Page</Link>
       <Link href='/register' style={styles.link}>Register Page</Link>
+      <Link href='/profile' style={styles.link}>Profile</Link>
     </View>
   )
 }
