@@ -1,7 +1,23 @@
 import { Stack } from 'expo-router'
-import { StyleSheet} from 'react-native'
+import { StyleSheet, I18nManager} from 'react-native';
+import i18n from '../localization/i18n';
+import { useEffect } from 'react';
+
+
+
 
 const RootLayout = () => {
+
+  useEffect(() => {
+    const currentLang = i18n.language;
+    const shouldBeRTL = currentLang === 'ar' || currentLang === 'he';
+
+    if (I18nManager.isRTL !== shouldBeRTL) {
+      I18nManager.allowRTL(shouldBeRTL);
+      I18nManager.forceRTL(shouldBeRTL);
+      Updates.reloadAsync(); // App restart required
+    }
+  }, []);
 
   return (
    <Stack screenOptions={{
